@@ -1,5 +1,6 @@
 PulpApp::Application.routes.draw do
 
+resources :ratings, only: :update
  resources :restaurants do
      resources :reviews, shallow: true
   end

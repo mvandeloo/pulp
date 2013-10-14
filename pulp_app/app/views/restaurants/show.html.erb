@@ -1,13 +1,16 @@
 <h1> <%= @restaurant.title %> </h1>
 <div><%= @restaurant.description %></div>
 
+
+<p> <%= link_to "New Review", new_restaurant_review_path(@restaurant, @review) %></p> 
+
  <% if @restaurant.reviews.empty? %>
  <p> No Reviews yet. Be the first! </p>
  <% else %>
 	 <% @restaurant.reviews.each do |review| %>
-	 <%= review.title %>
-	 <%= review.review %>
+	 <b><%= review.title %>.</b><br>
+	 <%= review.review %>.<br>
+	 Rating: <%= stars_for_rating review.rating %> <br>
+	 <p>
 	 <% end %>
 <% end %>
-
-<p> <%= link_to "New Review", new_restaurant_review_path(@restaurant, @review) %></p> 

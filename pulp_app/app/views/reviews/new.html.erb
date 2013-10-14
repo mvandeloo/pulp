@@ -5,6 +5,15 @@
  <p>
  <%= f.label :review %> <br>
  <%= f.text_area :review, placeholder: 'Put your review here' %>
+
+<p>
+<% 1.upto(5) do |n| %>
+<%= f.label :rating, n, value: n %>
+<%= f.radio_button :rating, n %> <br>
+
+<% end %>
+
+
  <p>
  <%= f.submit %>
 

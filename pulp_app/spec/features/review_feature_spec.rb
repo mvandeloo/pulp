@@ -13,6 +13,7 @@ describe 'visit restaurant review path' do
       within '.new_review' do
         fill_in 'Title', with: 'The soup was ugly'
         fill_in 'Review', with: 'Never again'
+        choose '5'
         click_button "Create Review"
       end
 
