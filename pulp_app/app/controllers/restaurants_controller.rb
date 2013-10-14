@@ -5,9 +5,6 @@ class RestaurantsController < ApplicationController
     	@restaurants = Restaurant.all
   	end
 
-	def create
-    	@restaurant = Restaurant.new 
-  	end
 
 	def show
     	@restaurant = Restaurant.find(params[:id])
@@ -15,10 +12,10 @@ class RestaurantsController < ApplicationController
 
 
 	def new
-	@restaurant=Restaurant.new
+	     @restaurant=Restaurant.new
 	end
 
-	  def create
+	def create
     @restaurant = Restaurant.new params[:restaurant].permit(:title, :description)
 
     if @restaurant.save

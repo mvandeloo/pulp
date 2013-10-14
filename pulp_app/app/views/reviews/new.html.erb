@@ -1,0 +1,11 @@
+<%= form_for [@restaurant, @review] do |f| %>
+<h1>Write your review for <%= @restaurant.title %> </h1>
+ <%= f.label :title %> <br>
+ <%= f.text_field :title, placeholder: 'Put a headline of your review here' %>
+ <p>
+ <%= f.label :review %> <br>
+ <%= f.text_area :review, placeholder: 'Put your review here' %>
+ <p>
+ <%= f.submit %>
+
+<% end %>
