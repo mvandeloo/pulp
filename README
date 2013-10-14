@@ -1,0 +1,12 @@
+Test Week 8 at Makersacademy (Ruby on Rails, Rspec, Capybara). 
+
+Task: Build a restaurant review app like yelp with ruby on rails. We were allowed to use our notes, books and google. 
+
+- A restaurant page should be created usng a form.
+- An index page should list all restaurants.
+- Click on a restaurant opens restaurant page.
+- A review of a restarant is composed of some text.
+
+Extensions:
+- Display rating with stars
+
